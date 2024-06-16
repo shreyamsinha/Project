@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization</title>
+</head>
+<body>
+    <h1>Text Summarization</h1>
+    <form method="post">
+        <label for="file_path">File Path:</label>
+        <input type="text" id="file_path" name="file_path"><br><br>
+        <label for="top_n">Top N Sentences:</label>
+        <input type="number" id="top_n" name="top_n" min="1" value="50"><br><br>
+        <input type="submit" value="Summarize">
+    </form>
+    {% if summary %}
+        <h2>Summary:</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
